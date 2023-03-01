@@ -10,17 +10,18 @@ AMREX_HYDRO_HOME   ?= ${SUBMODS}/AMReX-Hydro
 #
 
 # AMREX options
-DIM             = 2
+DIM             = 3
 
 # Compiler / parrallel paradigms
-COMP            = gnu
+COMP            = sycl
 USE_MPI         = TRUE
 USE_OMP         = FALSE
 USE_CUDA        = FALSE
 USE_HIP         = FALSE
+USE_SYCL        = TRUE
 
 # MISC options
-DEBUG           = TRUE
+DEBUG           = FALSE
 PRECISION       = DOUBLE
 VERBOSE         = FALSE
 TINY_PROFILE    = FALSE

@@ -6535,7 +6535,7 @@ PeleLM::mac_sync ()
       BL_PROFILE_VAR("PeleLM::mac_sync::Vsync", PLM_VSYNC);
       if (do_mom_diff == 0)
       {
-         mac_projector->mac_sync_compute(level,Ucorr,u_mac,Vsync,Ssync,
+         mac_projector->mac_sync_compute(level,Ucorr,Vsync,Ssync,
                                          (level > 0) ? &getAdvFluxReg(level) : 0,
                                          advectionType,prev_time,
                                          dt,AMREX_SPACEDIM,
@@ -6552,7 +6552,7 @@ PeleLM::mac_sync ()
                mac_projector->mac_sync_compute(level,Ucorr,Vsync,comp,
                                                comp,EdgeState, comp,
                                                (level > 0 ? &getAdvFluxReg(level):0),
-                                               advectionType,dt,
+                                               dt,
                                                last_mac_sync_iter);
             }
          }
@@ -6583,7 +6583,7 @@ PeleLM::mac_sync ()
             mac_projector->mac_sync_compute(level,Ucorr,Ssync,comp,s_ind,
                                             EdgeState,comp,
                                             (level > 0 ? &getAdvFluxReg(level):0),
-                                            advectionType,dt,
+                                            dt,
                                             last_mac_sync_iter);
          }
       }
